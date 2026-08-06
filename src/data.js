@@ -2,11 +2,11 @@ export const siteConfig = {
   name: 'Monky Software',
   location: 'Pelotas - RS',
   email: '',
-  whatsapp: '',
+  whatsapp: 'a',
   socialLinks: {
-    instagram: '',
-    github: '',
-    linkedin: '',
+    instagram: 'a',
+    github: ' ',
+    linkedin: 'a',
   },
 }
 
@@ -136,22 +136,31 @@ export const services = [
     number: '01',
     title: 'Sites e landing pages',
     description:
-      'Páginas rápidas, responsivas e desenvolvidas para apresentar negócios, serviços e campanhas com clareza.',
-    items: ['Identidade visual aplicada', 'SEO básico', 'CTA direto'],
+      'Páginas com narrativa objetiva, visual forte e caminho claro para transformar interesse em conversa.',
+    items: ['Copy orientada a conversão', 'SEO técnico essencial', 'CTA sem fricção'],
+    outcome: 'Ideal para validar oferta, apresentar serviços e gerar contatos qualificados.',
+    metric: 'Oferta clara',
+    marker: 'Atrair',
   },
   {
     number: '02',
     title: 'Lojas virtuais e catálogos',
     description:
-      'Experiências digitais para organizar produtos e facilitar o contato entre empresas e clientes.',
-    items: ['Produtos organizados', 'Filtros e destaques', 'Contato facilitado'],
+      'Vitrines digitais organizadas para explorar produtos, destacar oportunidades e reduzir dúvidas antes do contato.',
+    items: ['Produtos escaneáveis', 'Filtros inteligentes', 'WhatsApp no fluxo'],
+    outcome: 'Perfeito para quem precisa vender melhor sem depender de apresentações manuais.',
+    metric: 'Compra simples',
+    marker: 'Vender',
   },
   {
     number: '03',
     title: 'Sistemas personalizados',
     description:
-      'Ferramentas criadas de acordo com os processos e necessidades específicas de cada negócio.',
-    items: ['Painel administrativo', 'Fluxos sob medida', 'Base para evolução'],
+      'Produtos sob medida para organizar operações, automatizar rotinas e dar mais controle para a equipe.',
+    items: ['Painel operacional', 'Fluxos sob medida', 'Base escalável'],
+    outcome: 'Indicado para negócios que já sentiram o limite da planilha e do improviso.',
+    metric: 'Operação fluida',
+    marker: 'Escalar',
   },
 ]
 

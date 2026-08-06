@@ -27,4 +27,7 @@ export type NumberedContent = {
   title: string
   description: string
   items?: string[]
+  outcome?: string
+  metric?: string
+  marker?: string
 }
