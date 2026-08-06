@@ -1,0 +1,16 @@
+.section-label {
+  color: var(--gray-mid);
+  font-size: clamp(0.74rem, 0.7vw, 0.84rem);
+  font-weight: 650;
+  letter-spacing: 0.14em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.section-label--light {
+  color: #62625e;
+}
+
+.section-label--dark {
+  color: var(--gray-mid);
+}

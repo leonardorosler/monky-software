@@ -1,0 +1,160 @@
+.container {
+  width: min(100% - clamp(32px, 6vw, 96px), 1380px);
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: clamp(88px, 12vw, 168px);
+}
+
+.section--dark {
+  color: var(--warm-white);
+  background: var(--black);
+}
+
+.section--light {
+  color: var(--black);
+  background: var(--warm-white);
+}
+
+.section-intro {
+  margin-bottom: clamp(48px, 7vw, 94px);
+}
+
+.section-intro--split {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: clamp(18px, 2vw, 28px);
+  align-items: start;
+}
+
+.section-intro--split .section-label {
+  grid-column: span 4;
+}
+
+.section-intro--split h2 {
+  grid-column: 6 / -1;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 560;
+  letter-spacing: -0.055em;
+  line-height: 0.94;
+}
+
+h2 {
+  font-size: clamp(2.4rem, 7vw, 6.9rem);
+}
+
+h3 {
+  font-size: clamp(2rem, 4vw, 4.7rem);
+}
+
+p {
+  line-height: 1.55;
+}
+
+.button {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid currentColor;
+  padding: 0.86rem 1.1rem;
+  font-size: 0.92rem;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  transition:
+    transform 260ms ease,
+    background-color 260ms ease,
+    color 260ms ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button--light {
+  color: var(--black);
+  background: var(--warm-white);
+}
+
+.button--light:hover {
+  color: var(--warm-white);
+  background: transparent;
+}
+
+.text-link {
+  position: relative;
+  display: inline-flex;
+  width: fit-content;
+  min-height: 44px;
+  align-items: center;
+}
+
+.text-link::after {
+  position: absolute;
+  right: 0;
+  bottom: 8px;
+  left: 0;
+  height: 1px;
+  content: '';
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 260ms ease;
+}
+
+.text-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.reveal {
+  animation: reveal 650ms ease both;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#site-content {
+  position: relative;
+  z-index: 1;
+  background: var(--warm-white);
+}
+
+@media (max-width: 1024px) {
+  .section-intro--split {
+    grid-template-columns: 1fr;
+  }
+
+  .section-intro--split .section-label,
+  .section-intro--split h2 {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 430px) {
+  .container {
+    width: min(100% - 28px, 1380px);
+  }
+
+  .section {
+    padding-block: 72px;
+  }
+
+  .button,
+  .text-link {
+    width: 100%;
+  }
+}
