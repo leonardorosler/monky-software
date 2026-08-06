@@ -50,8 +50,15 @@
 
 .services-head__note span,
 .services-summary__eyebrow,
-.service-card__top,
 .service-card__metric {
+  color: var(--gray-mid);
+  font-size: 0.72rem;
+  font-weight: 760;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.service-card__top {
   color: var(--gray-mid);
   font-size: 0.72rem;
   font-weight: 760;
@@ -193,10 +200,42 @@
 
 .service-card__top {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   gap: 16px;
   padding-bottom: 16px;
   border-bottom: 1px solid rgba(242, 242, 238, 0.14);
+}
+
+.service-card__top small {
+  display: inline-flex;
+  min-height: 36px;
+  align-items: center;
+  border: 1px solid rgba(184, 255, 92, 0.42);
+  padding-inline: 13px;
+  color: #d9ff92;
+  background:
+    linear-gradient(135deg, rgba(184, 255, 92, 0.2), rgba(184, 255, 92, 0.06)),
+    rgba(5, 5, 5, 0.42);
+  box-shadow: 0 0 0 1px rgba(184, 255, 92, 0.06);
+}
+
+.service-card:nth-child(2) .service-card__top small {
+  border-color: rgba(122, 218, 255, 0.42);
+  color: #bdefff;
+  background:
+    linear-gradient(135deg, rgba(122, 218, 255, 0.19), rgba(122, 218, 255, 0.055)),
+    rgba(5, 5, 5, 0.42);
+  box-shadow: 0 0 0 1px rgba(122, 218, 255, 0.06);
+}
+
+.service-card:nth-child(3) .service-card__top small {
+  border-color: rgba(242, 242, 238, 0.36);
+  color: var(--warm-white);
+  background:
+    linear-gradient(135deg, rgba(242, 242, 238, 0.16), rgba(242, 242, 238, 0.045)),
+    rgba(5, 5, 5, 0.42);
+  box-shadow: 0 0 0 1px rgba(242, 242, 238, 0.05);
 }
 
 .service-card__main {

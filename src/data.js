@@ -39,15 +39,15 @@ export const projects = [
     valuePoints: ['Agenda mais previsível', 'Equipe organizada', 'Painel para o dono'],
     visualTagline: 'Agenda, equipe e operação em um só lugar.',
     technologies: ['React', 'Node.js', 'TypeScript', 'PostgreSQL', 'Prisma'],
-    image: 'mockup-king.png',
+    image: '/mockups/barbearia-kibg/king-mob-desk.png',
     screens: [
       {
-        image: 'mockup-king.png',
+        image: '/mockups/barbearia-king/king-mob-desk.png',
         label: 'Visão geral',
         description: 'Resumo da agenda, próximos horários e rotina da barbearia.',
       },
       {
-        image: 'mockup-king.png',
+        image: '/mockups/barbearia-king/king-mob.png',
         label: 'Agendamentos',
         description: 'Fluxo para marcar, acompanhar e evitar conflito de horários.',
       },
@@ -73,15 +73,15 @@ export const projects = [
     valuePoints: ['Estoque fácil de explorar', 'Busca com filtros', 'Contato mais rápido'],
     visualTagline: 'Uma vitrine digital pronta para vender melhor.',
     technologies: ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'Supabase'],
-    image: 'mockup-rd.png',
+    image: '/mockups/rd-veiculos/rd-mob-desk.png',
     screens: [
       {
-        image: 'mockup-rd.png',
+        image: '/mockups/rd-veiculos/rd-mob-desk.png',
         label: 'Vitrine',
         description: 'Apresentação clara dos veículos com foco em conversão.',
       },
       {
-        image: 'mockup-rd.png',
+        image: '/mockups/rd-veiculos/rd-mob-01.png',
         label: 'Filtros',
         description: 'Busca por tipo, modelo e características do estoque.',
       },
