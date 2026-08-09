@@ -3,15 +3,15 @@ import { siteConfig } from '../data.js'
 import './Contact.css'
 
 const projectTypes = [
-  'Sistema sob medida',
-  'Landing page de conversão',
-  'Produto SaaS',
-  'Melhoria em sistema existente',
+  'Site institucional',
+  'Landing page para vender ou captar contatos',
+  'Sistema para organizar minha empresa',
+  'Ferramenta digital ou plataforma própria',
+  'Melhoria em algo que já existe',
 ]
 
 const initialValues = {
   name: '',
-  company: '',
   email: '',
   phone: '',
   projectType: '',
@@ -30,9 +30,8 @@ export function Contact() {
     if (!siteConfig.whatsapp) return ''
 
     const text = [
-      'Olá, quero um diagnóstico para um projeto com a Monky.',
-      values.projectType ? `Tipo: ${values.projectType}` : '',
-      values.company ? `Empresa: ${values.company}` : '',
+      'Olá, quero conversar sobre um projeto digital para meu negócio.',
+      values.projectType ? `Projeto: ${values.projectType}` : '',
       values.phone ? `WhatsApp: ${values.phone}` : '',
       values.message ? `Contexto: ${values.message}` : '',
     ]
@@ -40,14 +39,13 @@ export function Contact() {
       .join('\n')
 
     return `https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(text)}`
-  }, [values.company, values.message, values.phone, values.projectType])
+  }, [values.message, values.phone, values.projectType])
 
   const emailHref = useMemo(() => {
     if (!siteConfig.email) return ''
 
     const body = [
       `Nome: ${values.name}`,
-      values.company ? `Negócio: ${values.company}` : '',
       `E-mail: ${values.email}`,
       values.phone ? `WhatsApp: ${values.phone}` : '',
       values.projectType ? `Tipo: ${values.projectType}` : '',
@@ -60,7 +58,7 @@ export function Contact() {
     return `mailto:${siteConfig.email}?subject=${encodeURIComponent(
       'Diagnóstico Monky',
     )}&body=${encodeURIComponent(body)}`
-  }, [values.company, values.email, values.message, values.name, values.phone, values.projectType])
+  }, [values.email, values.message, values.name, values.phone, values.projectType])
 
   const contactHref = whatsappHref || emailHref
 
@@ -77,14 +75,13 @@ export function Contact() {
     const nextErrors: FormErrors = {}
 
     if (!values.name.trim()) nextErrors.name = 'Informe seu nome.'
-    if (!values.email.trim()) {
-      nextErrors.email = 'Informe seu e-mail.'
-    } else if (!/^\S+@\S+\.\S+$/.test(values.email)) {
+    if (!values.phone.trim()) nextErrors.phone = 'Informe seu WhatsApp.'
+    if (values.email.trim() && !/^\S+@\S+\.\S+$/.test(values.email)) {
       nextErrors.email = 'Informe um e-mail válido.'
     }
-    if (!values.projectType) nextErrors.projectType = 'Escolha um tipo de projeto.'
+    if (!values.projectType) nextErrors.projectType = 'Escolha o tipo de projeto.'
     if (!values.message.trim()) {
-      nextErrors.message = 'Conte o que você quer organizar, vender ou automatizar.'
+      nextErrors.message = 'Conte o que você quer organizar, vender ou melhorar.'
     }
 
     return nextErrors
@@ -114,10 +111,10 @@ export function Contact() {
       <div className="container contact-grid">
         <div className="contact-heading reveal">
           <p className="section-label section-label--dark">Diagnóstico gratuito</p>
-          <h2>Pronto para tirar sua operação do improviso?</h2>
+          <h2>Receba um diagnóstico gratuito.</h2>
           <p>
-            Preencha o briefing inicial. A ideia é entender o gargalo, sugerir o
-            melhor próximo passo e transformar a primeira conversa em direção.
+            Conte em poucas linhas se você precisa de um site, landing page,
+            sistema ou ferramenta para sua empresa.
           </p>
         </div>
 
@@ -137,40 +134,17 @@ export function Contact() {
           </div>
 
           <div className="field">
-            <label htmlFor="company">Negócio</label>
-            <input
-              id="company"
-              name="company"
-              value={values.company}
-              onChange={(event) => updateValue('company', event.target.value)}
-              autoComplete="organization"
-            />
-          </div>
-
-          <div className="field">
-            <label htmlFor="email">E-mail</label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              value={values.email}
-              onChange={(event) => updateValue('email', event.target.value)}
-              aria-invalid={Boolean(errors.email)}
-              aria-describedby={errors.email ? 'email-error' : undefined}
-              autoComplete="email"
-            />
-            {errors.email && <small id="email-error">{errors.email}</small>}
-          </div>
-
-          <div className="field">
             <label htmlFor="phone">WhatsApp</label>
             <input
               id="phone"
               name="phone"
               value={values.phone}
               onChange={(event) => updateValue('phone', event.target.value)}
+              aria-invalid={Boolean(errors.phone)}
+              aria-describedby={errors.phone ? 'phone-error' : undefined}
               autoComplete="tel"
             />
+            {errors.phone && <small id="phone-error">{errors.phone}</small>}
           </div>
 
           <div className="field field--full">
@@ -198,7 +172,22 @@ export function Contact() {
           </div>
 
           <div className="field field--full">
-            <label htmlFor="message">Qual problema você quer resolver?</label>
+            <label htmlFor="email">E-mail opcional</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              value={values.email}
+              onChange={(event) => updateValue('email', event.target.value)}
+              aria-invalid={Boolean(errors.email)}
+              aria-describedby={errors.email ? 'email-error' : undefined}
+              autoComplete="email"
+            />
+            {errors.email && <small id="email-error">{errors.email}</small>}
+          </div>
+
+          <div className="field field--full">
+            <label htmlFor="message">O que você precisa criar ou melhorar?</label>
             <textarea
               id="message"
               name="message"
@@ -213,7 +202,7 @@ export function Contact() {
 
           <div className="form-actions field--full">
             <button className="button button--light" type="submit">
-              Solicitar diagnóstico
+              Receber diagnóstico
             </button>
             <p className="form-note" aria-live="polite">
               {sent

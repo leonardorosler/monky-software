@@ -6,6 +6,7 @@ const navItems = [
   { href: '#projetos', label: 'Cases' },
   { href: '#processo', label: 'Processo' },
   { href: '#contato', label: 'Contato' },
+  { href: '#faq', label: 'Dúvida frequentes' },
 ]
 
 export function Header() {

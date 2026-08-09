@@ -40,25 +40,25 @@ export const heroSlides = [
   {
     image: '/mockup-veiculos.png',
     title: 'Monky Veículos',
-    label: 'Produto SaaS',
+    label: 'Gestão comercial',
   },
 ]
 
 export const projects = [
   {
     id: 'monky-barber',
-    title: 'Monky Barber',
-    category: 'Sistema para barbearias',
+    title: 'Operação mais organizada',
+    category: 'Monky Barber',
     description:
-      'Plataforma para barbearias controlarem agenda, barbeiros, serviços, disponibilidade, assinaturas e painel administrativo em um único fluxo.',
+      'Agenda, equipe e clientes em um fluxo mais simples para reduzir controle manual.',
     challenge:
       'Reduzir agenda manual, conflito de horário, falhas no controle de profissionais e perda de visão sobre a rotina da barbearia.',
     focus:
       'Transformar agendamento, equipe e recorrência em uma operação simples para o dono acompanhar.',
     result:
-      'Mais previsibilidade na agenda, menos trabalho manual e uma base pronta para evoluir com a barbearia.',
-    valuePoints: ['Agenda previsível', 'Equipe organizada', 'Assinaturas no fluxo'],
-    visualTagline: 'Agenda, equipe e recorrência em um só lugar.',
+      'Mais previsibilidade no atendimento e menos tempo perdido com controles espalhados.',
+    valuePoints: ['Agenda previsível', 'Equipe organizada', 'Menos retrabalho'],
+    visualTagline: 'Rotina mais clara para dono, equipe e cliente.',
     technologies: ['React', 'Node.js', 'TypeScript', 'PostgreSQL', 'Prisma'],
     image: '/mockups/barbearia-king/king-mob-desk.png',
     screens: [
@@ -80,29 +80,29 @@ export const projects = [
     ],
     projectUrl: '',
     repositoryUrl: '',
-    status: 'Produto em evolução',
+    status: 'Em evolução',
   },
   {
     id: 'rd-veiculos',
-    title: 'RD Veículos',
-    category: 'Catálogo digital de veículos',
+    title: 'Venda com apresentação melhor',
+    category: 'Monky Veiculos',
     description:
-      'Catálogo com filtros, destaques, favoritos, contato de interessados e painel administrativo para manter o estoque sempre apresentável.',
+      'Uma vitrine clara para apresentar produtos, receber interessados e facilitar o atendimento.',
     challenge:
       'Tirar o estoque do improviso e reduzir o caminho entre interesse do comprador e atendimento comercial.',
     focus:
       'Apresentar veículos com clareza, acelerar consultas e facilitar contato via canais comerciais.',
     result:
-      'Uma vitrine digital mais clara para quem vende e mais simples para quem compra.',
-    valuePoints: ['Estoque escaneável', 'Busca com filtros', 'Contato mais rápido'],
-    visualTagline: 'Uma vitrine digital pronta para vender melhor.',
+      'Mais clareza para quem vende e um caminho mais simples para quem quer comprar.',
+    valuePoints: ['Produtos claros', 'Busca fácil', 'Contato rápido'],
+    visualTagline: 'Uma apresentação comercial pronta para vender melhor.',
     technologies: ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'Supabase'],
     image: '/mockups/rd-veiculos/rd-mob-desk.png',
     screens: [
       {
         image: '/mockups/rd-veiculos/rd-mob-desk.png',
         label: 'Vitrine',
-        description: 'Apresentação clara dos veículos com foco em conversão.',
+        description: 'Apresentação clara dos veículos com foco em gerar contato.',
       },
       {
         image: '/mockups/rd-veiculos/rd-mob-01.png',
@@ -121,24 +121,24 @@ export const projects = [
   },
   {
     id: 'monky-veiculos',
-    title: 'Monky Veículos',
-    category: 'SaaS para lojas de veículos',
+    title: 'Controle comercial com autonomia',
+    category: 'Monky Veículos',
     description:
-      'Produto recorrente para lojas e garagens criarem catálogos digitais, gerenciarem estoque, leads e páginas públicas com autonomia.',
+      'Uma ferramenta para manter produtos, contatos e oportunidades comerciais em ordem.',
     challenge:
       'Dar autonomia para lojistas publicarem estoque, receberem contatos e manterem presença digital atualizada.',
     focus:
       'Transformar catálogo de veículos em um produto escalável para diferentes negócios.',
     result:
-      'Mais controle comercial, leads centralizados e publicação de estoque sem depender de terceiros.',
-    valuePoints: ['Produto recorrente', 'Publicação autônoma', 'Leads centralizados'],
-    visualTagline: 'Catálogos digitais escaláveis para lojas e garagens.',
+      'Mais controle comercial, contatos centralizados e menos dependência para atualizar informações.',
+    valuePoints: ['Controle comercial', 'Atualização simples', 'Contatos centralizados'],
+    visualTagline: 'Mais autonomia para vender e acompanhar oportunidades.',
     technologies: ['React', 'Node.js', 'TypeScript', 'PostgreSQL'],
     image: '/mockup-veiculos.png',
     screens: [
       {
         image: '/mockup-veiculos.png',
-        label: 'Catálogo SaaS',
+        label: 'Catálogo',
         description: 'Estrutura pronta para diferentes lojas publicarem seus veículos.',
       },
       {
@@ -154,64 +154,64 @@ export const projects = [
     ],
     projectUrl: '',
     repositoryUrl: '',
-    status: 'Produto em desenvolvimento',
+    status: 'Em desenvolvimento',
   },
 ]
 
 export const services = [
   {
     number: '01',
-    title: 'Sistemas sob medida',
+    title: 'Sites e landing pages',
     description:
-      'Para negócios que já sentiram o limite da planilha, do WhatsApp solto e dos controles espalhados.',
-    items: ['Painel operacional', 'Fluxos do seu processo', 'Permissões e relatórios'],
+      'Páginas profissionais para apresentar sua empresa, explicar sua oferta e gerar contatos.',
+    items: ['Site', 'Oferta', 'WhatsApp'],
     outcome:
-      'Ideal para organizar agenda, equipe, assinaturas, estoque, leads ou qualquer rotina que hoje depende de trabalho manual.',
+      'Transforma interesse em conversa.',
+    metric: 'Vender',
+    marker: 'Presença',
+  },
+  {
+    number: '02',
+    title: 'Sistemas para empresas',
+    description:
+      'Soluções para organizar agenda, equipe, clientes, estoque, pedidos ou processos internos.',
+    items: ['Gestão', 'Atendimento', 'Controle'],
+    outcome:
+      'Reduz trabalho manual e melhora a rotina.',
     metric: 'Organizar',
     marker: 'Operação',
   },
   {
-    number: '02',
-    title: 'Landing pages que vendem',
-    description:
-      'Páginas com promessa clara, prova visual, narrativa de dor e CTA direto para transformar visita em conversa.',
-    items: ['Copy de conversão', 'Hero forte', 'Formulário ou WhatsApp'],
-    outcome:
-      'Perfeito para validar oferta, vender serviços, captar leads e apresentar um produto com mais autoridade.',
-    metric: 'Converter',
-    marker: 'Aquisição',
-  },
-  {
     number: '03',
-    title: 'Produtos SaaS',
+    title: 'Ferramentas digitais',
     description:
-      'Transformamos uma solução repetível em produto com painel, clientes, regras, páginas públicas e base para recorrência.',
-    items: ['Produto escalável', 'Área administrativa', 'Base para assinatura'],
+      'Produtos, painéis e plataformas para transformar uma ideia em algo usável e escalável.',
+    items: ['Painel', 'Produto', 'Evolução'],
     outcome:
-      'Indicado quando a ideia não é apenas um projeto único, mas uma plataforma que pode atender vários clientes.',
-    metric: 'Escalar',
-    marker: 'Recorrência',
+      'Cria uma base para crescer com mais controle.',
+    metric: 'Crescer',
+    marker: 'Produto',
   },
 ]
 
 export const principles = [
   {
     number: '01',
-    title: 'Chega de controle espalhado',
+    title: 'Não sei exatamente o que preciso.',
     description:
-      'Agenda, clientes, pagamentos, equipe e leads precisam conversar entre si para a operação ficar previsível.',
+      'Tudo bem. O diagnóstico serve para organizar a ideia antes de construir.',
   },
   {
     number: '02',
-    title: 'O usuário precisa entender rápido',
+    title: 'Consigo começar pequeno?',
     description:
-      'Interface boa reduz treinamento, evita erro e faz a equipe usar o sistema no dia a dia.',
+      'Sim. A primeira versão foca no que gera valor rápido e pode evoluir depois.',
   },
   {
     number: '03',
-    title: 'Primeira versão com objetivo claro',
+    title: 'É só uma tela bonita?',
     description:
-      'Construímos o necessário para gerar valor primeiro e deixamos a base pronta para evoluir com segurança.',
+      'Não. Design entra para deixar a operação mais simples, clara e vendável.',
   },
 ]
 
@@ -220,24 +220,24 @@ export const processSteps = [
     number: '01',
     title: 'Diagnóstico',
     description:
-      'Mapeamos a rotina atual, gargalos, controles manuais, canais de venda e o que precisa ficar mais simples.',
+      'Entendemos gargalos, rotina e o que precisa ficar mais simples.',
   },
   {
     number: '02',
-    title: 'Desenho da solução',
+    title: 'Plano claro',
     description:
-      'Definimos páginas, fluxos, funcionalidades, prioridade e experiência antes de entrar em desenvolvimento.',
+      'Definimos prioridade, fluxo principal e primeira versão.',
   },
   {
     number: '03',
-    title: 'Protótipo e construção',
+    title: 'Construção',
     description:
-      'Criamos a interface, validamos a jornada principal e desenvolvemos a base técnica do produto.',
+      'Criamos a experiência e colocamos a solução para funcionar no uso real.',
   },
   {
     number: '04',
-    title: 'Lançamento e evolução',
+    title: 'Evolução',
     description:
-      'Entregamos a primeira versão funcionando, acompanhamos ajustes e planejamos os próximos ganhos.',
+      'Lançamos, ajustamos e planejamos os próximos ganhos.',
   },
 ]

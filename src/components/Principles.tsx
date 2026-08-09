@@ -5,11 +5,11 @@ import './Principles.css'
 
 export function Principles() {
   return (
-    <section className="section section--light" id="principios">
+    <section className="section section--dark" id="principios">
       <div className="container principles-grid">
         <div className="reveal">
-          <SectionLabel>03 - Por que funciona</SectionLabel>
-          <h2>Um bom sistema resolve problemas que aparecem toda semana.</h2>
+          <SectionLabel tone="dark">03 - Dúvidas comuns</SectionLabel>
+          <h2>Menos trava antes da primeira conversa.</h2>
         </div>
 
         <div className="principles-list">
@@ -23,7 +23,7 @@ export function Principles() {
             </article>
           ))}
           <a className="principles-cta" href="#contato">
-            Quero descobrir o que automatizar primeiro
+            Quero conversar sem compromisso
           </a>
         </div>
       </div>

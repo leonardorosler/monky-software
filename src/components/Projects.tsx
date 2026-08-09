@@ -141,17 +141,11 @@ export function Projects() {
     <section className="section section--light projects-section" id="projetos">
       <div className="container">
         <div className="projects-hero reveal">
-          <SectionLabel>02 - Produto e prova</SectionLabel>
-          <h2>Projetos reais para entender o resultado.</h2>
+          <SectionLabel>02 - Exemplos reais</SectionLabel>
+          <h2>Projetos reais, sem promessa vazia.</h2>
           <p>
-            Mostramos o produto em contexto: o que existia antes, o que ficou
-            mais simples e como a rotina do negócio ganha clareza.
+            Alguns exemplos do tipo de solução que a Monky coloca de pé.
           </p>
-          <div className="projects-proof" aria-label="Resumo dos projetos">
-            <span>Operação mais clara</span>
-            <span>Contato facilitado</span>
-            <span>Autonomia para crescer</span>
-          </div>
         </div>
 
         <div className="projects-list">
@@ -173,26 +167,12 @@ export function Projects() {
                   <p>{project.description}</p>
                 </div>
 
-                <dl className="project-details">
-                  {project.challenge && (
-                    <div>
-                      <dt>Desafio</dt>
-                      <dd>{project.challenge}</dd>
-                    </div>
-                  )}
-                  {project.focus && (
-                    <div>
-                      <dt>Foco</dt>
-                      <dd>{project.focus}</dd>
-                    </div>
-                  )}
-                  {project.result && (
-                    <div>
-                      <dt>Resultado</dt>
-                      <dd>{project.result}</dd>
-                    </div>
-                  )}
-                </dl>
+                {project.result && (
+                  <p className="project-result">
+                    <span>Resultado</span>
+                    {project.result}
+                  </p>
+                )}
 
                 {project.valuePoints && (
                   <div className="project-value">
@@ -207,7 +187,6 @@ export function Projects() {
 
                 <div className="project-action">
                   <a href="#contato">Quero algo parecido</a>
-                  <span>{project.technologies.slice(0, 2).join(' / ')}</span>
                 </div>
               </div>
 

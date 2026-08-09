@@ -1,6 +1,7 @@
 import { About } from './components/About'
 import { Contact } from './components/Contact'
 import { Footer } from './components/Footer'
+import { Faq } from './components/Faq'
 import { Header } from './components/Header'
 import { Hero } from './components/Hero'
 import { HomeIntro } from './components/HomeIntro'
@@ -22,6 +23,7 @@ function App() {
         <Principles />
         <Process />
         <About />
+        <Faq />
         <Contact />
       </main>
       <Footer />

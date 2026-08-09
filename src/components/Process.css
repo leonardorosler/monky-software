@@ -1,7 +1,7 @@
 .process-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: clamp(24px, 5vw, 76px);
+  gap: clamp(24px, 4vw, 58px);
 }
 
 .process-grid > * {
@@ -18,11 +18,11 @@
 .process-sticky h2 {
   margin-top: 26px;
   margin-bottom: 28px;
-  font-size: clamp(2.2rem, 5.1vw, 5rem);
+  font-size: clamp(2rem, 4.4vw, 4.35rem);
 }
 
 .process-sticky p {
-  color: var(--gray-light);
+  color: #42423f;
 }
 
 .process-cta {
@@ -32,7 +32,7 @@
   align-items: center;
   margin-top: 28px;
   border-bottom: 1px solid currentColor;
-  color: var(--warm-white);
+  color: var(--black);
   font-weight: 720;
 }
 
@@ -44,27 +44,27 @@
   display: grid;
   grid-template-columns: 96px 1fr;
   gap: 28px;
-  border-top: 1px solid var(--line-dark);
-  padding-block: clamp(28px, 5vw, 58px);
+  border-top: 1px solid rgba(5, 5, 5, 0.2);
+  padding-block: clamp(22px, 3.4vw, 38px);
 }
 
 .process-step:last-child {
-  border-bottom: 1px solid var(--line-dark);
+  border-bottom: 1px solid rgba(5, 5, 5, 0.2);
 }
 
 .process-step span {
-  color: var(--gray-mid);
+  color: #686864;
   font-weight: 700;
   letter-spacing: 0;
 }
 
 .process-step h3 {
-  margin-bottom: 14px;
-  font-size: clamp(1.65rem, 3vw, 3.45rem);
+  margin-bottom: 10px;
+  font-size: clamp(1.45rem, 2.4vw, 2.75rem);
 }
 
 .process-step p {
-  color: var(--gray-light);
+  color: #42423f;
 }
 
 @media (max-width: 1024px) {

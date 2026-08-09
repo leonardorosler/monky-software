@@ -3,22 +3,21 @@ import './About.css'
 
 export function About() {
   return (
-    <section className="section section--light about-section" id="sobre">
+    <section className="section section--dark about-section" id="sobre">
       <div className="container about-grid">
         <div className="about-logo reveal" aria-hidden="true">
           <img src="/logo-monky.png" alt="" />
         </div>
 
         <div className="about-copy reveal">
-          <SectionLabel>05 - Sobre a Monky</SectionLabel>
+          <SectionLabel tone="dark">05 - Monky</SectionLabel>
           <h2>
-            A Monky une estratégia, design e desenvolvimento para criar sistemas
-            que entram na rotina do negócio.
+            Software para negócios que cansaram do improviso.
           </h2>
           <p>
-            O foco não é empilhar funcionalidades. É construir uma experiência
-            clara para o dono, para a equipe e para o cliente final, com base
-            preparada para evoluir depois da primeira entrega.
+            A Monky cria sites, landing pages, sistemas e ferramentas digitais
+            para empresas que querem vender melhor, organizar processos e crescer
+            com mais controle.
           </p>
           <a className="about-cta" href="#contato">
             Falar com a Monky

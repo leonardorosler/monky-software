@@ -154,13 +154,28 @@
 
 @media (max-width: 900px) {
   .brand-gate__frame {
+    display: block;
     min-height: 100svh;
     padding: 24px 18px;
+  }
+
+  .brand-gate__top {
+    position: absolute;
+    top: 24px;
+    right: 18px;
+    left: 18px;
   }
 
   .brand-gate__top img {
     width: 118px;
     max-height: 86px;
+  }
+
+  .brand-gate__center {
+    position: absolute;
+    inset: 0;
+    padding: 0 18px;
+    pointer-events: none;
   }
 
   .brand-gate__headline {
@@ -171,5 +186,12 @@
   .brand-gate__center::before,
   .brand-gate__center::after {
     width: 86px;
+  }
+
+  .brand-gate__footer {
+    position: absolute;
+    right: 18px;
+    bottom: 24px;
+    left: 18px;
   }
 }
