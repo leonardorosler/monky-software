@@ -10,16 +10,19 @@ export function About() {
         </div>
 
         <div className="about-copy reveal">
-          <SectionLabel>05 — Sobre a Monky</SectionLabel>
+          <SectionLabel>05 - Sobre a Monky</SectionLabel>
           <h2>
-            A Monky Software transforma necessidades reais de pequenos negócios
-            em produtos digitais simples, profissionais e úteis.
+            A Monky une estratégia, design e desenvolvimento para criar sistemas
+            que entram na rotina do negócio.
           </h2>
           <p>
-            Cada projeto começa pelo entendimento do negócio. A tecnologia vem
-            depois, como ferramenta para organizar processos, melhorar
-            experiências e criar novas possibilidades.
+            O foco não é empilhar funcionalidades. É construir uma experiência
+            clara para o dono, para a equipe e para o cliente final, com base
+            preparada para evoluir depois da primeira entrega.
           </p>
+          <a className="about-cta" href="#contato">
+            Falar com a Monky
+          </a>
         </div>
       </div>
     </section>

@@ -1,11 +1,12 @@
-import { type FormEvent, useState } from 'react'
+import { type FormEvent, useMemo, useState } from 'react'
+import { siteConfig } from '../data.js'
 import './Contact.css'
 
 const projectTypes = [
-  'Site ou landing page',
-  'Loja virtual ou catálogo',
-  'Sistema personalizado',
-  'Outro',
+  'Sistema sob medida',
+  'Landing page de conversão',
+  'Produto SaaS',
+  'Melhoria em sistema existente',
 ]
 
 const initialValues = {
@@ -24,6 +25,44 @@ export function Contact() {
   const [values, setValues] = useState<FormValues>(initialValues)
   const [errors, setErrors] = useState<FormErrors>({})
   const [sent, setSent] = useState(false)
+
+  const whatsappHref = useMemo(() => {
+    if (!siteConfig.whatsapp) return ''
+
+    const text = [
+      'Olá, quero um diagnóstico para um projeto com a Monky.',
+      values.projectType ? `Tipo: ${values.projectType}` : '',
+      values.company ? `Empresa: ${values.company}` : '',
+      values.phone ? `WhatsApp: ${values.phone}` : '',
+      values.message ? `Contexto: ${values.message}` : '',
+    ]
+      .filter(Boolean)
+      .join('\n')
+
+    return `https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(text)}`
+  }, [values.company, values.message, values.phone, values.projectType])
+
+  const emailHref = useMemo(() => {
+    if (!siteConfig.email) return ''
+
+    const body = [
+      `Nome: ${values.name}`,
+      values.company ? `Negócio: ${values.company}` : '',
+      `E-mail: ${values.email}`,
+      values.phone ? `WhatsApp: ${values.phone}` : '',
+      values.projectType ? `Tipo: ${values.projectType}` : '',
+      '',
+      values.message,
+    ]
+      .filter((line) => line !== '')
+      .join('\n')
+
+    return `mailto:${siteConfig.email}?subject=${encodeURIComponent(
+      'Diagnóstico Monky',
+    )}&body=${encodeURIComponent(body)}`
+  }, [values.company, values.email, values.message, values.name, values.phone, values.projectType])
+
+  const contactHref = whatsappHref || emailHref
 
   const updateValue = (
     field: keyof FormValues,
@@ -44,7 +83,9 @@ export function Contact() {
       nextErrors.email = 'Informe um e-mail válido.'
     }
     if (!values.projectType) nextErrors.projectType = 'Escolha um tipo de projeto.'
-    if (!values.message.trim()) nextErrors.message = 'Conte um pouco sobre a ideia.'
+    if (!values.message.trim()) {
+      nextErrors.message = 'Conte o que você quer organizar, vender ou automatizar.'
+    }
 
     return nextErrors
   }
@@ -59,17 +100,25 @@ export function Contact() {
       return
     }
 
-    // Integração futura: enviar `values` para uma API, serviço de e-mail ou CRM.
+    if (contactHref) {
+      window.open(contactHref, '_blank', 'noopener,noreferrer')
+      setSent(true)
+      return
+    }
+
     setSent(true)
-    setValues(initialValues)
   }
 
   return (
     <section className="section section--dark contact-section" id="contato">
       <div className="container contact-grid">
         <div className="contact-heading reveal">
-          <p className="section-label section-label--dark">Contato</p>
-          <h2>Tem uma ideia? Vamos entender o que ela precisa para funcionar.</h2>
+          <p className="section-label section-label--dark">Diagnóstico gratuito</p>
+          <h2>Pronto para tirar sua operação do improviso?</h2>
+          <p>
+            Preencha o briefing inicial. A ideia é entender o gargalo, sugerir o
+            melhor próximo passo e transformar a primeira conversa em direção.
+          </p>
         </div>
 
         <form className="contact-form" onSubmit={onSubmit} noValidate>
@@ -88,7 +137,7 @@ export function Contact() {
           </div>
 
           <div className="field">
-            <label htmlFor="company">Empresa</label>
+            <label htmlFor="company">Negócio</label>
             <input
               id="company"
               name="company"
@@ -114,7 +163,7 @@ export function Contact() {
           </div>
 
           <div className="field">
-            <label htmlFor="phone">Telefone ou WhatsApp</label>
+            <label htmlFor="phone">WhatsApp</label>
             <input
               id="phone"
               name="phone"
@@ -149,7 +198,7 @@ export function Contact() {
           </div>
 
           <div className="field field--full">
-            <label htmlFor="message">Mensagem</label>
+            <label htmlFor="message">Qual problema você quer resolver?</label>
             <textarea
               id="message"
               name="message"
@@ -164,12 +213,14 @@ export function Contact() {
 
           <div className="form-actions field--full">
             <button className="button button--light" type="submit">
-              Enviar mensagem
+              Solicitar diagnóstico
             </button>
             <p className="form-note" aria-live="polite">
               {sent
-                ? 'Mensagem preparada com sucesso. A integração de envio pode ser conectada futuramente.'
-                : 'Envio simulado por enquanto, sem backend conectado.'}
+                ? contactHref
+                  ? 'Seu briefing foi preparado no canal de contato.'
+                  : 'Briefing pronto. Envie pelo canal oficial da Monky para continuar.'
+                : 'Resposta ideal em até 1 dia útil.'}
             </p>
           </div>
         </form>

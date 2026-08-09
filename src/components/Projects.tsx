@@ -141,11 +141,11 @@ export function Projects() {
     <section className="section section--light projects-section" id="projetos">
       <div className="container">
         <div className="projects-hero reveal">
-          <SectionLabel>01 / Projetos selecionados</SectionLabel>
-          <h2>Produtos digitais com função clara.</h2>
+          <SectionLabel>02 - Produto e prova</SectionLabel>
+          <h2>Projetos reais para entender o resultado.</h2>
           <p>
-            Uma seleção de sistemas e catálogos criados para organizar rotinas,
-            apresentar produtos e dar mais controle para negócios reais.
+            Mostramos o produto em contexto: o que existia antes, o que ficou
+            mais simples e como a rotina do negócio ganha clareza.
           </p>
           <div className="projects-proof" aria-label="Resumo dos projetos">
             <span>Operação mais clara</span>
@@ -205,29 +205,10 @@ export function Projects() {
                   </div>
                 )}
 
-                <div className="project-tech-note" aria-hidden="true">
-                  <span>Base técnica</span>
-                  <span>{project.technologies.slice(0, 3).join(' / ')}</span>
+                <div className="project-action">
+                  <a href="#contato">Quero algo parecido</a>
+                  <span>{project.technologies.slice(0, 2).join(' / ')}</span>
                 </div>
-
-                {(project.projectUrl || project.repositoryUrl) && (
-                  <div className="project-links">
-                    {project.projectUrl && (
-                      <a href={project.projectUrl} target="_blank" rel="noreferrer">
-                        Ver projeto ↗
-                      </a>
-                    )}
-                    {project.repositoryUrl && (
-                      <a
-                        href={project.repositoryUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        Repositório ↗
-                      </a>
-                    )}
-                  </div>
-                )}
               </div>
 
               <ProjectPoster project={project} index={index} />

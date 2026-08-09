@@ -39,9 +39,10 @@
 h1,
 h2,
 h3 {
-  font-weight: 560;
-  letter-spacing: -0.055em;
-  line-height: 0.94;
+  font-family: var(--font-display);
+  font-weight: 650;
+  letter-spacing: 0;
+  line-height: 1;
 }
 
 h2 {
@@ -58,32 +59,53 @@ p {
 
 .button {
   display: inline-flex;
-  min-height: 48px;
+  min-height: 50px;
   align-items: center;
   justify-content: center;
   border: 1px solid currentColor;
-  padding: 0.86rem 1.1rem;
-  font-size: 0.92rem;
+  border-radius: 6px;
+  padding: 0.9rem 1.2rem;
+  font-size: 0.95rem;
   font-weight: 650;
-  letter-spacing: -0.01em;
+  letter-spacing: 0;
   transition:
     transform 260ms ease,
     background-color 260ms ease,
-    color 260ms ease;
+    color 260ms ease,
+    border-color 260ms ease,
+    box-shadow 260ms ease;
 }
 
 .button:hover {
-  transform: translateY(-2px);
+  transform: translateY(-1px);
+}
+
+.button:active {
+  transform: translateY(0);
 }
 
 .button--light {
   color: var(--black);
-  background: var(--warm-white);
+  border-color: var(--accent);
+  background: var(--accent);
+  box-shadow: 0 16px 42px rgba(242, 242, 238, 0.14);
 }
 
 .button--light:hover {
+  color: var(--black);
+  background: var(--accent-strong);
+  box-shadow: 0 20px 52px rgba(242, 242, 238, 0.18);
+}
+
+.button--ghost {
   color: var(--warm-white);
-  background: transparent;
+  border-color: rgba(242, 242, 238, 0.28);
+  background: rgba(242, 242, 238, 0.025);
+}
+
+.button--ghost:hover {
+  border-color: rgba(242, 242, 238, 0.52);
+  background: rgba(242, 242, 238, 0.075);
 }
 
 .text-link {
@@ -130,7 +152,7 @@ p {
 #site-content {
   position: relative;
   z-index: 1;
-  background: var(--warm-white);
+  background: var(--black);
 }
 
 @media (max-width: 1024px) {

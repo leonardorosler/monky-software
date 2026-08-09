@@ -9,15 +9,15 @@ export function Services() {
       <div className="container">
         <div className="services-head reveal">
           <div className="services-head__copy">
-            <SectionLabel tone="dark">02 — O que construímos</SectionLabel>
-            <h2>Produtos digitais com cara de negócio sério.</h2>
+            <SectionLabel tone="dark">01 - Soluções</SectionLabel>
+            <h2>O que a Monky tira do improviso.</h2>
           </div>
 
           <div className="services-head__note" aria-label="Foco da entrega">
             <span>Estratégia</span>
             <p>
-              Unimos posicionamento, interface e desenvolvimento para criar experiências
-              que explicam valor rápido e deixam o próximo passo evidente.
+              A entrega precisa resolver uma dor real: menos controle manual,
+              mais previsibilidade e uma experiência que o cliente entende rápido.
             </p>
           </div>
         </div>
@@ -25,16 +25,19 @@ export function Services() {
         <div className="services-layout">
           <aside className="services-summary reveal" aria-label="Como pensamos a entrega">
             <span className="services-summary__eyebrow">Método Monky</span>
-            <strong>Clareza antes de tela bonita.</strong>
+            <strong>Dor primeiro, recurso depois.</strong>
             <p>
-              Cada projeto nasce com uma pergunta simples: o que o usuário precisa
-              entender, confiar ou fazer nos primeiros segundos?
+              O visitante não compra uma lista de tecnologias. Ele compra uma
+              operação mais organizada, atendimento mais rápido e menos perda de tempo.
             </p>
             <div className="services-summary__checks">
-              <span>Mensagem direta</span>
-              <span>Hierarquia visual</span>
-              <span>Mobile first</span>
+              <span>Problema visível</span>
+              <span>Produto demonstrável</span>
+              <span>CTA sem atrito</span>
             </div>
+            <a className="services-summary__cta" href="#contato">
+              Quero organizar minha operação
+            </a>
           </aside>
 
           <div className="service-cards">
@@ -58,7 +61,12 @@ export function Services() {
                     ))}
                   </ul>
                 )}
-                {service.metric && <span className="service-card__metric">{service.metric}</span>}
+                <div className="service-card__footer">
+                  {service.metric && (
+                    <span className="service-card__metric">{service.metric}</span>
+                  )}
+                  <a href="#contato">Conversar sobre isso</a>
+                </div>
               </article>
             ))}
           </div>

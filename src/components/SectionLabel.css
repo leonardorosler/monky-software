@@ -2,7 +2,7 @@
   color: var(--gray-mid);
   font-size: clamp(0.74rem, 0.7vw, 0.84rem);
   font-weight: 650;
-  letter-spacing: 0.14em;
+  letter-spacing: 0;
   line-height: 1.2;
   text-transform: uppercase;
 }

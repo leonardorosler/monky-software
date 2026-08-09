@@ -2,8 +2,8 @@ import { siteConfig } from '../data.js'
 import './Footer.css'
 
 const footerNav = [
-  { href: '#projetos', label: 'Projetos' },
-  { href: '#servicos', label: 'Serviços' },
+  { href: '#servicos', label: 'Soluções' },
+  { href: '#projetos', label: 'Cases' },
   { href: '#processo', label: 'Processo' },
   { href: '#contato', label: 'Contato' },
 ]
@@ -16,19 +16,19 @@ const socialLabels = {
 
 export function Footer() {
   const year = new Date().getFullYear()
-  const socialLinks = Object.entries(siteConfig.socialLinks).filter(
-    ([, href]) => Boolean(href),
+  const socialLinks = Object.entries(siteConfig.socialLinks).filter(([, href]) =>
+    Boolean(href),
   )
 
   return (
     <footer className="site-footer">
       <div className="container footer-grid">
         <div>
-          <a className="footer-brand" href="#top">
+          <a className="footer-brand" href="#inicio">
             <img src="/logo-monky.png" alt="" />
             <span>Monky Software</span>
           </a>
-          <p>Software feito para negócios reais.</p>
+          <p>Software feito para operações reais.</p>
         </div>
 
         <nav aria-label="Navegação reduzida">

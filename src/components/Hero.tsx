@@ -85,11 +85,15 @@ export function Hero() {
         </div>
 
         <div className="brand-gate__footer">
-          <button type="button" onClick={dismissGate}>
-            <span>Entrar no site</span>
-            <span aria-hidden="true" className="brand-gate__arrow">
-              ↓
-            </span>
+          <button
+            className="brand-gate__scroll"
+            type="button"
+            aria-label="Entrar no site"
+            onClick={dismissGate}
+          >
+            <span aria-hidden="true">↓</span>
+            <span aria-hidden="true">↓</span>
+            <span aria-hidden="true">↓</span>
           </button>
         </div>
       </div>

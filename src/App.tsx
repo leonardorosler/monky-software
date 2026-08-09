@@ -17,8 +17,8 @@ function App() {
       <Header />
       <main id="site-content">
         <HomeIntro />
-        <Projects />
         <Services />
+        <Projects />
         <Principles />
         <Process />
         <About />

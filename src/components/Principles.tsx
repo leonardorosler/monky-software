@@ -8,8 +8,8 @@ export function Principles() {
     <section className="section section--light" id="principios">
       <div className="container principles-grid">
         <div className="reveal">
-          <SectionLabel>03 — Como pensamos</SectionLabel>
-          <h2>Tecnologia só faz sentido quando melhora o trabalho de quem a utiliza.</h2>
+          <SectionLabel>03 - Por que funciona</SectionLabel>
+          <h2>Um bom sistema resolve problemas que aparecem toda semana.</h2>
         </div>
 
         <div className="principles-list">
@@ -22,6 +22,9 @@ export function Principles() {
               </div>
             </article>
           ))}
+          <a className="principles-cta" href="#contato">
+            Quero descobrir o que automatizar primeiro
+          </a>
         </div>
       </div>
     </section>
