@@ -50,8 +50,15 @@ export type HeroSlide = {
   label: string
 }
 
+export type HeroDriftWallItem = {
+  image: string
+  title: string
+  href?: string
+}
+
 export const siteConfig: SiteConfig
 export const heroSlides: HeroSlide[]
+export const heroDriftWallItems: HeroDriftWallItem[]
 export const projects: Project[]
 export const services: NumberedContent[]
 export const principles: NumberedContent[]

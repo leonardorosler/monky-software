@@ -44,6 +44,25 @@ export const heroSlides = [
   },
 ]
 
+export const heroDriftWallItems = [
+  {
+    image: '/mockups/barbearia-king/king-mob-desk.png',
+    title: 'Monky Barber - agenda e equipe',
+  },
+  {
+    image: '/mockups/rd-veiculos/rd-mob-desk.png',
+    title: 'RD Veiculos - vitrine comercial',
+  },
+  {
+    image: '/mockup-rd.png',
+    title: 'RD Veiculos - contato',
+  },
+  {
+    image: '/mockup-king.png',
+    title: 'Monky Barber - gestao',
+  },
+]
+
 export const projects = [
   {
     id: 'monky-barber',
@@ -57,7 +76,7 @@ export const projects = [
       'Transformar agendamento, equipe e recorrência em uma operação simples para o dono acompanhar.',
     result:
       'Mais previsibilidade no atendimento e menos tempo perdido com controles espalhados.',
-    valuePoints: ['Agenda previsível', 'Equipe organizada', 'Menos retrabalho'],
+    valuePoints: ['Agenda previsível', 'Equipe organizada', 'Menos retrabalho'],  
     visualTagline: 'Rotina mais clara para dono, equipe e cliente.',
     technologies: ['React', 'Node.js', 'TypeScript', 'PostgreSQL', 'Prisma'],
     image: '/mockups/barbearia-king/king-mob-desk.png',
