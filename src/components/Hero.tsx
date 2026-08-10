@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
+import { DotGrid } from './DotGrid'
 import './Hero.css'
 
 const exitKeys = new Set([
@@ -72,6 +73,8 @@ export function Hero() {
         if (isLeaving) setIsVisible(false)
       }}
     >
+      <DotGrid className="brand-gate__dot-grid" activeColor="#fdfcff" />
+
       <div className="brand-gate__frame">
         <div className="brand-gate__top">
           <img src="/logo-monky.png" alt="Monky Software" />
